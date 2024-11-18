@@ -1,0 +1,169 @@
+/* Container for the entire create post section */
+.createpost {
+    width: 600px;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Header styling for the Create Post section */
+.createpost .post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.createpost .post-header h4 {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+}
+
+#createpost .post-header #post-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #6e8efb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#createpost .post-header #post-btn:hover {
+    background-color: #5a74d4;
+}
+
+/* Main content styling for upload */
+/* Other existing styles remain unchanged */
+
+/* Main content styling for upload */
+.createpost .main-div {
+    display: flex;
+    flex-direction: column; /* Stacking */
+    align-items: center;
+    margin: 15px 0;
+}
+
+/* Style for the image preview */
+.createpost .main-div img {
+    width: 100%; /* Use full width of the container */
+    max-width: 500px; /* Set a maximum width for the preview */
+    border-radius: 10px; /* Rounds the corners of the image */
+    margin-bottom: 15px; /* Space between image and file input */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+/* File input styling */
+.createpost .main-div input[type="file"] {
+    font-size: 16px;
+    color: #555;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+/* Change border color on focus */
+.createpost .main-div input[type="file"]:focus {
+    border-color: #6e8efb;
+}
+
+
+/* User details section */
+.createpost .details {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: left;
+}
+
+.createpost .details .card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.createpost .details .card-header .card-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.createpost .details .card-header .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.createpost .details h5 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Textarea for the post content */
+.createpost .details textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    resize: vertical;
+    min-height: 100px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.createpost .details textarea:focus {
+    border-color: #6e8efb;
+}
+
+/* Share Button Styling */
+#createpost .post-header #post-btn,
+.createpost #post-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #6e8efb;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.createpost #post-btn:hover {
+    background-color: #5a74d4;
+}
+
+/* Create Post Button Styling */
+.createpost .submit-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #6e8efb;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Adds space between text area and button */
+}
+
+.createpost .submit-btn:hover {
+    background-color: #5a74d4;
+}
