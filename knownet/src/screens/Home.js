@@ -4,8 +4,7 @@ import { useNavigate, Link } from 'react-router-dom';
 
 function Home() {
     var picLink="https://cdn-icons-png.flaticon.com/128/3135/3135768.png"
-    let limit=10;
-    let skip=0;
+
     const navigate = useNavigate();
     const [data, setData] = useState([]);
     const [comment, setComment] = useState("");
@@ -17,36 +16,15 @@ function Home() {
         if (!token) {
             navigate("/signin");
         } else {
-       fetchPosts();
-       window.addEventListener("scroll",handleScroll)
-       return()=>{
-           window.removeEventListener("scroll",handleScroll)
-       }
-        }
-    },[navigate]);
-
-    const fetchPosts=()=>{
-        fetch(`http://localhost:5000/allposts?limit=${limit}&&skip=${skip}`, {
-            headers: { "Authorization": "Bearer " + localStorage.getItem("jwt") },
-        })
-            .then(res => res.json())
-            .then((result) => {
-                console.log(result);
-                setData((data)=>[...data,...result])
-                
+            fetch("http://localhost:5000/allposts", {
+                headers: { "Authorization": "Bearer " + token },
             })
-            .catch(err => console.log(err));
-    }
-    const handleScroll = () => {
-        if (
-           document.documentElement.clientHeight+window.pageXOffset>=document.documentElement.scrollHeight
-        ) {
-            skip=skip+!0
-            fetchPosts()
-          
+                .then(res => res.json())
+                .then(result => setData(result))
+                .catch(err => console.log(err));
         }
-    };
-    
+    }, [navigate]);
+
     const togglecomment = (posts) => {
         if (show) {
             setShow(false);
